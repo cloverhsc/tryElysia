@@ -2,14 +2,21 @@
   "name": "elysiaApp",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "test": "bun playwright test"
   },
   "dependencies": {
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10",
+    "bun-types": "latest",
+    "playwright": "^1.45.1"
   },
-  "module": "src/index.js"
+  "module": "src/index.js",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
